@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const requiredCredential = "SULO-2026";
             
             if (studentNumInput === requiredCredential) {
-                window.location.href = 'index.html';
+                window.location.href = 'home.html';
             } else {
                 alert("❌ Invalid Student Number credential. Try using: SULO-2026");
             }
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const schoolTypeSelected = document.querySelector('input[name="schoolType"]:checked');
 
             if (schoolName && schoolAddress && regionProvince && schoolTypeSelected) {
-                window.location.href = 'index.html';
+                window.location.href = 'home.html';
             } else {
                 alert("❌ Please fill out the mandatory School Name, Address, Region, and Type to continue.");
             }
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (backToHomeBtn) {
         backToHomeBtn.addEventListener('click', function() {
-            window.location.href = 'index.html';
+            window.location.href = 'home.html';
         });
     }
 
