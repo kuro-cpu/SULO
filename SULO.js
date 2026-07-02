@@ -79,11 +79,10 @@ if (loginForm) {
             account.password === passwordInput
         );
 
-        if (matchedUser) {
-            localStorage.setItem('currentUser', JSON.stringify(matchedUser));
-            alert(`Welcome back, ${matchedUser.firstName}!`);
-            window.location.href = 'home.html';
-        } else {
+        if (!matchedUser) {
+    const saved = localStorage.getItem('databaseAccounts');
+    alert("Debug Info:\nInput: " + usernameInput + "\nDatabase: " + saved);
+} else {
             alert("Invalid User ID or Password. Please try again.");
         }
     });
