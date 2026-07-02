@@ -1885,3 +1885,25 @@ body.gemini-view-body {
 .thinking-bubble {
     animation: pulse-animation 1.5s infinite ease-in-out;
 }
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999; /* Keeps it on top of everything */
+    background-color: white; /* Or match your logo background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 1s ease-in-out forwards;
+    animation-delay: 2s; /* The logo stays for 2 seconds before fading */
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
